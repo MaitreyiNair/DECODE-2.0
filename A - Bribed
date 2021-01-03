@@ -1,0 +1,48 @@
+//
+//  main.c
+//  Q1
+//
+//  Created by MAITREYI NAIR on 03/01/21.
+//
+
+#include <stdio.h>
+int n,f;
+
+int sum = 0;
+
+int main()
+{
+    scanf("%d",&n);
+    int k[n];
+    int i = 0;
+    while(i<n)
+    {
+        scanf("%d",&k[i]);
+        sum = sum + k[i];
+        i++;
+        
+        
+    }
+    
+    for (i = 1; i < n; ++i) {
+            if (k[0] < k[i])
+                k[0] = k[i];
+        
+    }
+    
+    f = k[0];
+    int d;
+    int i1 = f;
+    while(i1>=f)
+    {
+        d = n*i1 - sum;
+        d = d - sum;
+        
+        if(d<1)
+          i1++;
+        else
+            break;
+    }
+ 
+    printf("%d",i1);
+ }
